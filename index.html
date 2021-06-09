@@ -42,7 +42,7 @@
     </nav>
     <header class="mt-5">
         <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-5 d-flex flex-column align-items-xl-start align-items-lg-start align-items-md-center align-items-sm-center align-items-center">
                 <div class="hello">Hello, je suis...</div>
                 <div class="big-name">Lewis Nathaniel</div>
                 <div class="profession2">UI & UX</div>
@@ -66,9 +66,9 @@
                         <img src="assets/images/icons/10_instagram.png" with="50" height="50" class="mr-2" />
                     </li>
                 </ul>
-                <a href="#" class="contact text-dark">Contact</a>
+                <a href="#" class="contact text-dark">CONTACT</a>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="col-xl-6 col-lg-8 col-md-12 col-sm-12 col-xs-12 mb-5 d-flex justify-content-lg-end justify-content-md-center justify-content-sm-center justify-content-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="471" height="348.275" viewBox="0 0 471 348.275">
                     <g id="undraw_innovative_b409" transform="translate(0 0)">
                       <circle id="Ellipse_26" data-name="Ellipse 26" cx="64.857" cy="64.857" r="64.857" transform="translate(133.206 71.415)" fill="#6c63ff"/>
@@ -99,19 +99,109 @@
                       <ellipse id="Ellipse_30" data-name="Ellipse 30" cx="9.479" cy="0.542" rx="9.479" ry="0.542" transform="translate(152.663 335.218)" fill="#6c63ff"/>
                       <ellipse id="Ellipse_31" data-name="Ellipse 31" cx="9.479" cy="0.542" rx="9.479" ry="0.542" transform="translate(186.588 347.191)" fill="#6c63ff"/>
                     </g>
-                  </svg>
-                  
+                </svg>
             </div>
         </div>
     </header>
     <section id="projects" class="row">
+        <div class="offset-xl-3 col-xl-6">
+            <ul class="d-flex justify-content-around list-unstyled">
+                <li><a href="#">Tous</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Interaction</a></li>
+            </ul>
+        </div>
         <div class="col-12">
-
+            <div class="row" id="targetProjects">
+                <div class="card col-4 m-0 p-0" style="width: 18rem;">
+                    <img src="assets/images/projects/App-Screens-Perspective-MockUp-full.jpg" class="card-img-top" />
+                    <div class="card-body">
+                        <div>Categorie</div>
+                        <div class="d-flex justify-content-between">
+                            <div>Projet</div>
+                            <div>2018</div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="assets/js/data.json"></script>
+    <script type="text/javascript">
+        var datas = [
+            {
+                "id":0,
+                "img":"App-Screens-Perspective-MockUp-full.jpg",
+                "cat":"Web / Mobile"
+            },
+            {
+                "id":1,
+                "img":"cover_photo.jpg",
+                "cat":"Interaction"
+            },
+            {
+                "id":2,
+                "img":"Rectangle 405.jpg",
+                "cat":"Web / Mobile / Interaction"
+            },
+            {
+                "id":3,
+                "img":"sample_1.jpg",
+                "cat":"Interaction"
+            },
+            {
+                "id":4,
+                "img":"sample_2.jpg",
+                "cat":"Web"
+            },
+            {
+                "id":5,
+                "img":"sample_4.jpg",
+                "cat":"Mobile"
+            },
+            {
+                "id":6,
+                "img":"sample_5.jpg",
+                "cat":"Web"
+            },
+            {
+                "id":7,
+                "img":"sample_6.jpg",
+                "cat":"Web / Mobile"
+            },
+            {
+                "id":8,
+                "img":"sample_7.jpg",
+                "cat":"Mobile / Interaction"
+            }
+        ]
+        
+        // Ajout des fichiers au chargement
+        window.addEventListener("load", function(event) {
+            let target = document.getElementById("targetProjects");
+            datas.map((element) => {
+                
+                target.appendChild(block)
+            });
+        });
+        $(document).ready(function(){
+            let target = $('#targetProjects');
+            let block = '<div class="card col-4 m-0 p-0" style="width: 18rem;" data-id="'+ element.id +'">';
+                    block +='<img src="assets/images/projects/'+ element.img +'" class="card-img-top" />';
+                    block +='<div class="card-body">';
+                    block +='    <div class="categorie">'+ element.cat +'</div>';
+                    block +='    <div class="d-flex justify-content-between">';
+                    block +='        <div>Projet</div>';
+                    block +='        <div>2018</div>';
+                    block +='    </div>';
+                    block +='</div>';
+                block +='</div>';
+            target.append(block);
+        });
+    </script>
 </body>
 </html>

@@ -23,7 +23,7 @@
     src: url("../assets/montserrat-webfont/webfonts/Montserrat-ExtraBold.eot") format("eot");
 }
 
-nav, header{
+nav, header, #projects{
     margin:0 200px;
 }
 nav .name{
@@ -64,6 +64,7 @@ header .contact{
     border:2px solid #2B2A2C;
     text-align: center;
     padding:10px 30px;
+    width:150px;
     border-radius:50px;
     color:#2B2A2C;
     font-weight: bold;
@@ -74,4 +75,25 @@ header .contact{
 header .contact:hover{
     background: #dadada;
     color:white;
+}
+
+#projects ul li a{
+    text-decoration:none !important;
+    color:#2B2A2C;
+    transition: color 0.3s ease;
+}
+
+#projects ul li a:hover{
+    color:#5f5d61;
+}
+
+@media screen and (max-width : 1170px) {
+    nav, header, section{
+        margin:100px;
+    }
+}
+@media screen and (max-width : 970px) {
+    nav, header, section{
+        margin:0;
+    }
 }
