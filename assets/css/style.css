@@ -149,9 +149,6 @@ footer .btnContactFooter:hover{
     transform:scale(1.2);
     opacity:0.6;
 }
-#site{
-    margin-top:100px;
-}
 .sticky {
     background:white;
     width:100%;
