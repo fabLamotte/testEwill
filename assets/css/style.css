@@ -1,27 +1,4 @@
-@font-face {
-    font-family: 'montserrat-regular';
-    src: url("../assets/montserrat-webfont/webfonts/Montserrat-Regular.woff");
-}
-@font-face {
-    font-family: 'montserrat-bold';
-    src: url("../assets/montserrat-webfont/webfonts/Montserrat-Bold.woff");
-}
-@font-face {
-    font-family: 'montserrat-bold';
-    src: url("../assets/montserrat-webfont/webfonts/");
-}
-@font-face {
-    font-family: 'montserrat-extra-bold';
-    src: url("../assets/montserrat-webfont/webfonts/Montserrat-ExtraBold.eot") format("eot");
-}
-@font-face {
-    font-family: 'montserrat-extra-light';
-    src: url("../assets/montserrat-webfont/webfonts/Montserrat-ExtraLight.eot") format("eot");
-}
-@font-face {
-    font-family: 'montserrat-extra-bold-italic';
-    src: url("../assets/montserrat-webfont/webfonts/Montserrat-ExtraBold.eot") format("eot");
-}
+
 nav .name{
     font-size:16px;
     font-weight: bold;
