@@ -49,6 +49,9 @@ header .contact:hover{
     background: #dadada;
     color:white;
 }
+header{
+    margin-top:100px;
+}
 
 #projects ul li a{
     text-decoration:none !important;
@@ -114,9 +117,6 @@ footer .btnContactFooter:hover{
     color:white !important;
     border:1px solid white !important;
 }
-.headCard{
-    overflow:hidden;
-}
 .zoomable{
     cursor:pointer;
     transition:transform 0.3s, opacity 0.3s ease;
@@ -126,8 +126,6 @@ footer .btnContactFooter:hover{
     transform:scale(1.2);
     opacity:0.6;
 }
-.sticky {
-    background:white;
-    width:100%;
-    z-index:3;
+#blog, #aPropos, #projects{
+    padding-top:150px;
 }
