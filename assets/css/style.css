@@ -22,11 +22,6 @@
     font-family: 'montserrat-extra-bold-italic';
     src: url("../assets/montserrat-webfont/webfonts/Montserrat-ExtraBold.eot") format("eot");
 }
-*{
-    line-height: normal;
-    padding:0;
-    margin:0;
-}
 nav .name{
     font-size:16px;
     font-weight: bold;
@@ -158,8 +153,6 @@ footer .btnContactFooter:hover{
     margin-top:100px;
 }
 .sticky {
-    top: 0;
-    position: fixed;
     background:white;
     width:100%;
     z-index:3;
