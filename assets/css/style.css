@@ -15,7 +15,7 @@ nav .profession{
     font-weight: bold;
     padding:0;
 }
-.navbar-nav .nav-item.active .nav-link{
+.navbar-nav .nav-item.active{
     border-bottom:3px solid #2B2A2C;
 }
 
@@ -104,7 +104,7 @@ footer .btnContactFooter:hover{
     opacity:0.6;
 }
 #blog, #aPropos, #projects{
-    padding-top:100px;
+    padding-top:120px;
 }
 .descProject{
     height:100%;
