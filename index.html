@@ -103,7 +103,7 @@
             </div>
         </div>
     </header>
-    <section id="projects" class="row">
+    <section id="projects" class="row no-gutters">
         <div class="offset-0 offset-lg-3 col-12 col-lg-6">
             <ul class="d-flex justify-content-around list-unstyled align-items-center">
                 <li onClick="emptyResearch(this)" class="empty">Tous</li>
@@ -342,13 +342,16 @@
 
                     // Corps de la card 
                     let card = document.createElement('div');          
-                    card.className ="card border m-3 rounded";
+                    card.className ="card border m-3 rounded qsd";
                     bloc.appendChild(card);
 
                         // Image header de la card
+                        let header = document.createElement('div');
+                        header.className = "headCard";
                         let cardImgTop = document.createElement('img');
                         cardImgTop.src="assets/images/projects/"+element.img;
-                        cardImgTop.className="img-card-top img-fluid";
+                        cardImgTop.className="img-card-top img-fluid zoomable";
+                        header.appendChild(cardImgTop);
 
                         // Card Body
                         let cardBody = document.createElement('div'); 
@@ -378,7 +381,7 @@
                             dateProject.appendChild(dateProjectTitle);
                             sectionCard.appendChild(dateProject);
                     
-                    card.appendChild(cardImgTop); // Integration du header dans la card
+                    card.appendChild(header); // Integration du header dans la card
                     card.appendChild(cardBody); // Integration du header dans la card
                     cardBody.appendChild(sectionCard); // Integration de la section title et date du projet
 

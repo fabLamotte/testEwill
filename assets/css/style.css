@@ -143,14 +143,26 @@ footer .btnContactFooter:hover{
     color:white !important;
     border:1px solid white !important;
 }
+.headCard{
+    overflow:hidden;
+}
+.zoomable{
+    cursor:pointer;
+    transition:transform 0.3s, opacity 0.3s ease;
+    
+}
+.zoomable:hover{
+    transform:scale(1.2);
+    opacity:0.6;
+}
 
 @media screen and (max-width : 1170px) {
-    nav, header, section, #aPropos, #blog{
+    nav, header, section, #aPropos, #blog, #projects{
         margin:100px;
     }
 }
 @media screen and (max-width : 970px) {
-    nav, header, section, #aPropos, #blog{
+    nav, header, section, #aPropos, #blog, #projects{
         margin:0;
     }
 }
