@@ -276,7 +276,7 @@
                     <div class="modal-content p-0">
                         <div class="modal-body p-0 m-0">
                             <div class="row no-gutters">
-                                <div class="col-6 overflow-hidden" style="background:no-repeat url('assets/images/popup-1.jpg');">
+                                <div class="col-6 overflow-hidden" id="targetImg">
                                 </div>
                                 <div class="col-6 pl-3 m-0">
                                     <i class="fa fa-times-circle pointer h1 m-2 d-flex justify-content-end" style='cursor:pointer;' aria-hidden="true" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
@@ -284,7 +284,7 @@
                                     <div class=""><span id="targetProjectCat"></span> | 2018</div>
                                     <div class="font-weight-bold">Client:</div>
                                     <div class="text-secondary font-italic">Creative Agency</div>
-                                    <div class="text-secondary mt-3 overflow-auto h-50 p-0 m-0 h6">
+                                    <div class="text-secondary mt-3 overflow-auto p-0 m-0 descProject">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at mauris porta, ullamcorper sem quis, lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere purus. Suspendisse placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet nibh ex vitae dui. Aenean laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu nunc lobortis pulvinar. Duis viverra, quam non imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.
                                     </div>
                                 </div>
@@ -420,6 +420,7 @@
                             cardImgTop.setAttribute('data-toggle', 'modal');
                             cardImgTop.setAttribute('data-target', '#projectModal');
                             cardImgTop.setAttribute('data-cat', element.cat);
+                            cardImgTop.setAttribute('data-img', element.img);
                             cardImgTop.setAttribute('onClick', 'hydrateModal(this)');
                             header.appendChild(cardImgTop);
 
@@ -462,7 +463,12 @@
 
             function hydrateModal(card){
                 let target = document.getElementById("targetProjectCat");
+                let targetImg = document.getElementById("targetImg");
                 let cat = card.getAttribute("data-cat").split(',');
+                let imgPath = "assets/images/projects/"+card.getAttribute("data-img");
+                let img = document.createElement("img");
+                img.src = imgPath;
+                img.className = "h-100 img-fluid";
                 let result = "";
 
                 for (let x = 0; x < cat.length; x++) {
@@ -472,6 +478,9 @@
                         result += cat[x] + ' / ';
                     }
                 }
+
+                targetImg.innerHTML = '';
+                targetImg.appendChild(img);
                 target.innerHTML = '';
                 target.append(result);
             }

@@ -106,3 +106,8 @@ footer .btnContactFooter:hover{
 #blog, #aPropos, #projects{
     padding-top:100px;
 }
+.descProject{
+    height:100%;
+    max-height:300px;
+    margin-bottom:100px !important;
+}
