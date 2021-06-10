@@ -1,4 +1,3 @@
-
 nav .name{
     font-size:16px;
     font-weight: bold;
@@ -20,30 +19,8 @@ nav .profession{
     border-bottom:3px solid #2B2A2C;
 }
 
-header .hello{
-    font-size:32px;
-    font-family: 'montserrat-extra-light';
-    line-height: normal;
-}
-header .big-name{
-    font-size:45px;
-    font-weight: bold;
-    line-height: normal;
-}
-header .profession{
-    line-height: normal;
-}
 header .contact{
-    border:2px solid #2B2A2C;
-    text-align: center;
-    padding:10px 30px;
-    width:150px;
-    border-radius:50px;
-    color:#2B2A2C;
-    font-weight: bold;
-    font-size:16px;
     transition: background 0.3s, color 0.3s ease;
-    text-decoration:none !important;
 }
 header .contact:hover{
     background: #dadada;
@@ -127,5 +104,5 @@ footer .btnContactFooter:hover{
     opacity:0.6;
 }
 #blog, #aPropos, #projects{
-    padding-top:150px;
+    padding-top:100px;
 }
