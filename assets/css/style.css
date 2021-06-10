@@ -107,7 +107,7 @@ footer .btnContactFooter:hover{
     padding-top:120px;
 }
 .descProject{
-    height:100%;
-    max-height:300px;
+    height:100% !important;
+    max-height:250px !important;
     margin-bottom:100px !important;
 }
