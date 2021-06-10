@@ -22,9 +22,11 @@
     font-family: 'montserrat-extra-bold-italic';
     src: url("../assets/montserrat-webfont/webfonts/Montserrat-ExtraBold.eot") format("eot");
 }
-
-nav, header, #projects{
-    margin:0 200px;
+*{
+    line-height: normal;
+}
+nav, header, #projects, #aPropos, #blog{
+    margin:50px 200px;
 }
 nav .name{
     font-size:16px;
@@ -86,14 +88,66 @@ header .contact:hover{
 #projects ul li a:hover{
     color:#5f5d61;
 }
+#aPropos .aPropos{
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: bold;
+    color:#2B2A2C;
+}
+#aPropos .whoIAm{
+    font-size: 72px;
+    font-weight: bold;
+    color:#EFEFEF;
+}
+
+#aPropos .desc{
+    color:#6A696B;
+}
+
+#projects #targetProjects .card{
+    box-shadow: 2px 2px 5px #E5E5E5;
+}
+#projects ul li{
+    cursor:pointer;
+    transition:background 0.3s, padding 0.3s, border-radius 0.3s, color 0.3s, font-weight 0.3s, text-transform 0.3s ease;
+}
+
+#projects ul li.active{
+ background:#6A696B;
+ padding:10px 15px;
+ border-radius: 20px;
+ color:white;
+ font-weight:bold;
+ text-transform:uppercase;
+}
+
+.rounded-custom{
+    border-radius:50px !important;
+}
+
+.readButton{
+    transition:background 0.2s, color 0.2s ease !important;
+}
+
+.readButton:hover{
+    background: #2B2A2C;
+    color:white;
+}
+footer .btnContactFooter{
+    transition:color 0.4s, border 0.4s ease !important;
+}
+footer .btnContactFooter:hover{
+    color:white !important;
+    border:1px solid white !important;
+}
 
 @media screen and (max-width : 1170px) {
-    nav, header, section{
+    nav, header, section, #aPropos, #blog{
         margin:100px;
     }
 }
 @media screen and (max-width : 970px) {
-    nav, header, section{
+    nav, header, section, #aPropos, #blog{
         margin:0;
     }
 }
