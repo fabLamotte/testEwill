@@ -24,9 +24,8 @@
 }
 *{
     line-height: normal;
-}
-nav, header, #projects, #aPropos, #blog{
-    margin:50px 200px;
+    padding:0;
+    margin:0;
 }
 nav .name{
     font-size:16px;
@@ -155,14 +154,13 @@ footer .btnContactFooter:hover{
     transform:scale(1.2);
     opacity:0.6;
 }
-
-@media screen and (max-width : 1170px) {
-    nav, header, section, #aPropos, #blog, #projects{
-        margin:100px;
-    }
+#site{
+    margin-top:100px;
 }
-@media screen and (max-width : 970px) {
-    nav, header, section, #aPropos, #blog, #projects{
-        margin:0;
-    }
+.sticky {
+    top: 0;
+    position: fixed;
+    background:white;
+    width:100%;
+    z-index:3;
 }
